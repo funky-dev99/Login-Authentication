@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../components/my_button.dart';
 import '../components/my_textfeild.dart';
+import '../components/square_tile.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -91,13 +92,18 @@ class LoginPage extends StatelessWidget {
 
                 //Google+Apple buttons
 
-                Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    padding: EdgeInsets.symmetric(horizontal: 25),
-                    margin: EdgeInsets.only(left: 30, bottom: 30, right: 30),
-                    child: Image.asset('images/google.png')),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    // google button
+                    SquareTile(imagePath: 'images/google.png'),
+
+                    SizedBox(width: 25),
+
+                    // apple button
+                    SquareTile(imagePath: 'images/apple.png')
+                  ],
+                ),
 
                 //Register Now
 
