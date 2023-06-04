@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../components/my_textfeild.dart';
+
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key}) : super(key: key);
 
-  final usernameController = TextEditingController();
+  final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
   void userSignIn() {}
@@ -40,46 +42,20 @@ class LoginPage extends StatelessWidget {
                 ),
 
                 //Username Text field
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: TextField(
-                    controller: usernameController,
-                    decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.blueGrey),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black45),
-                        ),
-                        fillColor: Colors.white,
-                        filled: true,
-                        hintText: 'User Name',
-                        helperStyle: TextStyle(color: Colors.black45)),
-                  ),
+                MyTextField(
+                  controller: emailController,
+                  hintText: 'Email',
+                  obscureText: false,
                 ),
-
                 const SizedBox(
                   height: 25,
                 ),
 
                 //Password Text field
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25.0),
-                  child: TextField(
-                    controller: passwordController,
-                    obscureText: true,
-                    decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.blueGrey),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black45),
-                        ),
-                        fillColor: Colors.white,
-                        filled: true,
-                        hintText: 'Password',
-                        helperStyle: TextStyle(color: Colors.black45)),
-                  ),
+                MyTextField(
+                  controller: passwordController,
+                  hintText: 'Password',
+                  obscureText: true,
                 ),
 
                 //Forgot?
