@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../components/my_button.dart';
 import '../components/my_textfeild.dart';
 
 class LoginPage extends StatelessWidget {
@@ -80,24 +81,8 @@ class LoginPage extends StatelessWidget {
                   height: 15,
                 ),
 
-                GestureDetector(
+                MyButton(
                   onTap: userSignIn,
-                  child: Container(
-                    padding: EdgeInsets.all(25),
-                    margin: EdgeInsets.symmetric(horizontal: 25),
-                    decoration: BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.circular(8)),
-                    child: Center(
-                      child: Text(
-                        'Sign In',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
                 ),
 
                 //or continue
